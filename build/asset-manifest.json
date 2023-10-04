@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5da6d73c.css",
+    "main.js": "/static/js/main.62d702a2.js",
+    "static/media/newyork.png": "/static/media/newyork.1a86df7ce682672f919c.png",
+    "static/media/mountain.png": "/static/media/mountain.fb84a7efd6aa1a0a6789.png",
+    "static/media/bloomberg-logo-white.png": "/static/media/bloomberg-logo-white.fb2583220f3a4938f8b2.png",
+    "static/media/zeeker.png": "/static/media/zeeker.23d6aa3294423f5999e0.png",
+    "static/media/study.png": "/static/media/study.999e5af018bb7fa69398.png",
+    "static/media/threads.png": "/static/media/threads.c319e61078bcc9ee3c99.png",
+    "index.html": "/index.html",
+    "main.5da6d73c.css.map": "/static/css/main.5da6d73c.css.map",
+    "main.62d702a2.js.map": "/static/js/main.62d702a2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5da6d73c.css",
+    "static/js/main.62d702a2.js"
+  ]
+}
