@@ -1,0 +1,485 @@
+/* variables */
+:root {
+  --primary-color: #ff0404;
+  --secondary-color: #ffa028;
+  --light-color: #f3f4ef;
+  --dark-color: #000000;
+  --opinion-color: #0068ff;
+  --border-color: #999;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* general */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+  font-weight: 500;
+  color: #000000; /* Updated font color */
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000; /* Updated font color */
+}
+
+/* Utilities */
+.container {
+  max-width: 123rem;
+  margin: auto;
+}
+
+.category {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+.main .category:hover {
+  text-decoration: underline;
+}
+
+.navbar .category:hover {
+  font-weight: bolder;
+}
+
+.time_ago {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.flex_class {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.l_heading {
+  border-top: #000000 solid 0.1rem;
+  border-bottom: #000000 solid 0.1rem;
+  padding: 0.6rem 0.6rem 0.6rem 0;
+}
+
+.article_preview {
+  padding: 1rem 0;
+  border-bottom: black dotted 0.1rem;
+  margin-bottom: 1rem;
+}
+
+.article_name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.article_name:hover {
+  text-decoration: underline;
+}
+
+.blue {
+  color: var(--opinion-color);
+}
+
+/* margin */
+.mg_1 {
+  margin-bottom: 1rem;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.navbar .main_nav {
+  background-color: var(--dark-color);
+}
+
+.navbar .main_nav .main_nav_up {
+  padding: 0.8rem 0;
+}
+
+.navbar .main_nav .main_nav_up a {
+  color: var(--light-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0 1rem;
+  border-left: 0.1rem solid white;
+}
+
+.navbar .main_nav .main_nav_up ul li > *:first-child {
+  border: none;
+}
+
+.navbar .main_nav .main_nav_up ul li > *:nth-child(3) {
+  color: var(--secondary-color);
+}
+
+.navbar .main_nav .main_nav_down {
+  height: 7rem;
+  padding: 1.1rem 0.9rem 0.9rem 1.5rem;
+  position: relative;
+}
+
+.navbar .main_nav .main_nav_down img {
+  height: 3.6rem;
+  width: 17.8rem;
+}
+
+.navbar .main_nav .main_nav_down a {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--light-color);
+  margin-left: 1.5rem;
+}
+
+.navbar .main_nav .main_nav_down a:hover {
+  color: #999;
+}
+
+.navbar .main_nav .main_nav_down .btn {
+  padding: 0.7rem 1.4rem;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  border: white solid 0.1rem;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
+.navbar .main_nav .main_nav_down li .search {
+  border: white solid 0.1rem;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+}
+
+/* hidden menu */
+.toggler {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.navbar .main_nav .main_nav_down li .hamburger {
+  border: none;
+  padding: 0.5rem;
+  visibility: hidden;
+}
+
+.category-nav-hidden {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.navbar .main_nav .main_nav_down .category-nav-hidden ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.navbar .main_nav .main_nav_down .category-nav-hidden ul li a {
+  display: inline-block;
+  padding: 1rem;
+  border-bottom: #999 dotted 0.01rem;
+}
+
+.navbar .main_nav .main_nav_down .btn:hover,
+.navbar .main_nav .main_nav_down li .search:hover {
+  border-color: #999;
+}
+
+.category-nav,
+.economics {
+  border: var(--border-color) solid 0.1rem;
+  border-top: none;
+  background-color: #fff;
+}
+
+.category-nav .category {
+  padding: 1.3rem 0.8rem 0.8rem;
+}
+
+/* Economics */
+
+.economics a {
+  font-size: 1.4rem;
+  color: var(--dark-color);
+  padding: 1rem 2.3rem 1rem 1.4rem;
+}
+
+.economics a:hover {
+  opacity: 0.6;
+}
+
+.economics a .madad_type {
+  display: inline-block;
+  font-size: 1.4rem;
+  padding-right: 1rem;
+}
+
+.economics a > *:nth-child(2),
+.economics a > *:nth-child(3) {
+  margin-right: 0.5rem;
+}
+
+.economics a > *:nth-child(3),
+.economics a > *:nth-child(4) {
+  color: green;
+}
+
+.economics button {
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  background: none;
+}
+
+/* MAIN */
+.main {
+  padding: 2rem 1.4rem;
+  border: var(--border-color) solid 0.1rem;
+/* ... Previous CSS code ... */
+  border-top: none;
+  position: relative;
+}
+
+/* first article */
+.article {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.article img {
+  /* height: 25rem;
+  width: 38rem; */
+  height: 95%;
+  width: 95%;
+}
+
+.article_content {
+  border-bottom: black solid 0.1rem;
+}
+
+.article .article_content .article_name {
+  font-size: 4.6rem;
+  font-weight: 700;
+}
+
+.article .more_articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.article .more_articles a {
+  color: var(--dark-color);
+  font-size: 2rem;
+}
+
+.article .more_articles a:hover {
+  text-decoration: underline;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+  gap: 4rem;
+  padding: 2rem 0;
+}
+
+/* sidebar left */
+.sidebar_left .latest h3 {
+  color: var(--primary-color);
+}
+
+.sidebar_left .article_preview .time_ago {
+  color: var(--primary-color);
+}
+
+.sidebar_left .latest > *:last-child {
+  border: none;
+}
+
+.most_read span {
+  font-size: 2.4rem;
+}
+
+/* second article */
+.inner_articles .article {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.inner_articles .article_content .article_name {
+  font-size: 2.4rem;
+}
+
+.inner_articles .more_articles {
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr;
+}
+
+.inner_articles .more_articles a {
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+  border-bottom: black dotted 0.1rem;
+}
+
+.inner_articles .more_articles > *:first-child {
+  border-top: black dotted 0.1rem;
+}
+
+.inner_articles .article_content {
+  border-bottom: none;
+}
+
+/* 4 more articles */
+.inner_articles_middle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.inner_articles_down {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.inner_articles_down .article {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.inner_articles_down .live_video {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  position: relative;
+}
+
+.inner_articles_down .live_video::before {
+  content: 'Live';
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  top: 0;
+  left: 0rem;
+  width: 6rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  background-color: #000000;
+  color: white;
+}
+
+.inner_articles_down .live_video::after {
+  content: '';
+  border: red solid 0.5rem;
+  position: absolute;
+  top: 3rem;
+  left: 2.2rem;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.inner_articles_down .live_video a {
+  color: var(--light-color);
+  font-size: 85%;
+}
+
+/* ad */
+.ad {
+  width: 100%;
+  height: 30rem;
+  font-size: 1.2rem;
+  background-color: var(--opinion-color);
+  margin-bottom: 2rem;
+}
+
+/* opinion */
+.sidebar_right .opinion .article_preview .auther {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.opinion > *:last-child a {
+  font-size: 1.2rem;
+}
+
+/* newsletter */
+.newsletter h6 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+.newsletter p {
+  font-size: 1.4rem;
+}
+
+.newsletter .submit_mail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.newsletter input[type='email'] {
+  border: none;
+  border-bottom: #000000 solid 0.1rem;
+  padding: 0.5rem 0;
+}
+
+.newsletter input[type='button'] {
+  padding: 1rem 1.5rem;
+  width: 40%;
+  background-color: white;
+  border-width: 0.1rem;
+}
+
+.newsletter span {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.newsletter .terms {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
